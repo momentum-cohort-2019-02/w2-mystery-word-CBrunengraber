@@ -44,3 +44,5 @@ def test_is_word_complete():
     assert not is_word_complete(word, ["r", "e"])
     assert not is_word_complete(word, ["r", "e", "z"])
     assert is_word_complete(word, ["r", "e", "v", "i"])
+
+
