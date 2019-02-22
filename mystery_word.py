@@ -33,7 +33,9 @@ with open('words.txt') as file:
 print(words)
 
 
-#sort words in list by length, create three seperate lists
+#sort words in list by length
+# create three seperate lists or simply output the values that fit the parameters
+# check 2/22 video for clarity
 
 #rename the lists
 
@@ -54,3 +56,5 @@ print(words)
 
 # medium = []
 # hard = []
+
+#create main game loop
