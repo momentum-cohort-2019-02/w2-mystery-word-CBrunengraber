@@ -24,13 +24,14 @@ def normalize_text(text):
 
 
 with open('words.txt') as file:
+    # words = file.read()
+    # - this gave me a long list that had no commas
+    # put into a list python can understand
     words = file.read().splitlines() 
-    #sort your lists
+    # now - sort your lists
 
 print(words)
 
-
-# put into a list python can understand
 
 #sort words in list by length, create three seperate lists
 
