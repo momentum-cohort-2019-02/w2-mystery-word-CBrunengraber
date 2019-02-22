@@ -1,5 +1,5 @@
-# print("Welcome to word guess!")
-# print("Please select your level of difficulty: easy, medium, hard")
+#User inputs level of difficulty by selecting 1 of 3 options, if not, message tells user to enter one. You cannot bypass this. 
+#When an easy level is selected, the computer generates a random word from a list. It can only be 4-6 characters. 
 
 import string
 import random
@@ -23,41 +23,33 @@ def normalize_text(text):
 # tell the computer that words is word.txt - use with open so it will close the file when its done reading it
 
 
-with open('words.txt') as f:
-    words = f.read()
+with open('words.txt') as file:
+    words = file.read().splitlines() 
+    #sort your lists
 
-# print(words)
+print(words)
+
+
+# put into a list python can understand
+
+#sort words in list by length, create three seperate lists
+
+#rename the lists
 
 # user must enter level of difficulty
-level_of_difficulty = input("easy", "medium", "hard")
 
-#turn this to a while not loop
-
-while level_of_difficulty == (input):
-
-    if level_of_difficulty != (input):
-        return(print("You must enter easy, medium, hard, or just go play something else"))
-
-    if level_of_difficulty == "easy":
-        # program needs to slect proper list
-        # program print the word/spaces
-
-    elif level_of_difficulty == "medium":
-     # program needs to slect proper list
-     # program print the word/spaces
-
-    elif level_of_difficulty == "hard":
-        # program needs to slect proper list
-        # program print the word/spaces
-
-
-def level_of_difficulty(user_input="Welcome to word guess, please enter your level of difficulty: easy, medium, or hard")
-
+# x = input('Please select your level of difficulty - easy, medium, or hard: ')
+# print('You selected: ',x)
 
 # create a for loop with three seperate if statements
-easy = []
-medium = []
-hard = []
+
+# for number_of_letters in words: 
+#     if len('number_of_letters') >= 4 and <=6
 
 
-print("Great, you selected " + level_of_difficulty)
+
+
+
+
+# medium = []
+# hard = []
