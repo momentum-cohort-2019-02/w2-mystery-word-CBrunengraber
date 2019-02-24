@@ -29,47 +29,54 @@ with open('words.txt') as file:
 
 # print(words) - run this if you need to see what the words look like and in what format
 
-running = True
+# running = True
 
-while running:
-    x = input('Please select your level of difficulty - easy, medium, or hard: ')
-    print('You selected: ', x)
-    if x == 'easy':
-        running = False
-        print("let's play!")
-    if x == 'medium':
-        running = False
-        print("let's play!")
-    if x == 'hard':
-        running = False
-        print("let's play!")
-    if x not in ['easy', 'medium', 'hard']:     
-        print('you must enter easy, medium, or hard')
+# while running:
+#     x = input('Please select your level of difficulty - easy, medium, or hard: ')
+#     print('You selected: ', x)
+#     if x == 'easy':
+#         running = False
+#         print("let's play!")
+#     if x == 'medium':
+#         running = False
+#         print("let's play!")
+#     if x == 'hard':
+#         running = False
+#         print("let's play!")
+#     if x not in ['easy', 'medium', 'hard']:     
+#         print('you must enter easy, medium, or hard')
 
-
-#create main game loop
-# user must guess a hidden word in 12 trys or lose
-# *****how to get into game loop after completing above loop?******
-# I need the words to be brought into the game *****can they be defined and left outside loops or have to be put in each time?
-# words must be randomly selected for the user
-# letters must be guessed at
-# letters must be hidden and replaced with underscores, letters only shown when guessed
-# keep track of number of guesses
-# keep track of letters guessed
-# if user enters a guessed letter, print statement to select another letter
-# if user selects anything other than 1 letter (numbers, symbols, more than one letter), print statement telling them to select an unguessed letter. 
-# limit the number of attempts to 8 (****are any words in the list going to fall outside this spectrum?)
+    
 
 
+guesses_taken = 0
 
-game_loop = True # this should make the game run, and it will be false when won or lost
+print('Hello! What is your name?')
+myName = input()
 
-while game_loop:
-    choices = ('words') #not sure if this needs brackets instead, and if it should exist outside loop. 
-    auto_selected_word = random.choice(words).lower
-    guesses = 0 # other games online set this to none, not sure why - this is where the user guesses letters
-    guessed_letters = [] #users guesses get put here
-    unguessed_word = [] #replaces letters of unguessed word with dashes
-    for letter in auto_selected_word:
-        unguessed_word.append('_') # this should add letters guessed to the underscore until the word is completed
-    attempts = 8
+auto_selected_word = random.choice('words').lower
+print('Well, ' + myName + ', I am thinking of a word, and you must guess it.')
+
+for guessesTaken in range(8):
+    print('Take a guess.') 
+    guess = input()
+    guess = guess.lower()
+    blanks = '_' * len(auto_selected_word)
+
+    if guess == char in auto_selected_word:
+        print('Your guess is too low.') # Eight spaces in front of "print"
+
+    if guess != char in auto_selected_word:
+        print('Your guess is too high.')
+
+    if guess == auto_selected_word:
+        break
+
+if guess == auto_selected_word:
+    guessesTaken = str(guessesTaken + 1)
+    print('Good job, ' + myName + '! You guessed my word in ' +
+      guessesTaken + ' trys!')
+
+if guess != auto_selected_word:
+    number = str(number)
+    print('Sorry, the word I was thinking of was ' + number + '.')
