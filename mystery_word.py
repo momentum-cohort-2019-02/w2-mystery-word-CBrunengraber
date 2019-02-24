@@ -27,7 +27,8 @@ with open('words.txt') as file:
     words = file.read().splitlines() 
     # now - sort your lists
 
-# print(words) - run this if you need to see what the words look like and in what format
+# print(words) 
+# - run this if you need to see what the words look like and in what format
 # user must now enter level of difficulty
 
 running = True
