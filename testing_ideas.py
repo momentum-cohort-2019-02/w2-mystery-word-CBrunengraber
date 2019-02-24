@@ -55,6 +55,7 @@ print('Hello! What is your name?')
 myName = input()
 
 auto_selected_word = random.choice('words').lower
+
 print('Well, ' + myName + ', I am thinking of a word, and you must guess it.')
 
 for guessesTaken in range(8):
@@ -63,11 +64,13 @@ for guessesTaken in range(8):
     guess = guess.lower()
     blanks = '_' * len(auto_selected_word)
 
+    # char needs to be defined. not sure how to do this. It also needs to be recognized as a non-integer
+
     if guess == char in auto_selected_word:
-        print('Your guess is too low.') # Eight spaces in front of "print"
+        print() # you have to tell it to replace a blank with a letter 
 
     if guess != char in auto_selected_word:
-        print('Your guess is too high.')
+        print('Sorry ' + () 'is not a letter in word, guess again')
 
     if guess == auto_selected_word:
         break
