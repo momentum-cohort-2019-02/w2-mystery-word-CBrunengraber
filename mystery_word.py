@@ -1,6 +1,3 @@
-#User inputs level of difficulty by selecting 1 of 3 options, if not, message tells user to enter one. You cannot bypass this. 
-#When an easy level is selected, the computer generates a random word from a list. It can only be 4-6 characters. 
-
 import string
 import random
 
@@ -30,19 +27,34 @@ with open('words.txt') as file:
     words = file.read().splitlines() 
     # now - sort your lists
 
-print(words)
+# print(words) - run this if you need to see what the words look like and in what format
+# user must now enter level of difficulty
+
+running = True
+
+while running:
+    x = input('Please select your level of difficulty - easy, medium, or hard: ')
+    print('You selected: ', x)
+    if x == 'easy':
+        running = False
+        print("let's play!")
+    if x == 'medium':
+        running = False
+        print("let's play!")
+    if x == 'hard':
+        running = False
+        print("let's play!")
+    if x not in ['easy', 'medium', 'hard']:     
+        print('you must enter easy, medium, or hard')
 
 
 #sort words in list by length
+
 # create three seperate lists or simply output the values that fit the parameters
+
 # check 2/22 video for clarity
 
 #rename the lists
-
-# user must enter level of difficulty
-
-# x = input('Please select your level of difficulty - easy, medium, or hard: ')
-# print('You selected: ',x)
 
 # create a for loop with three seperate if statements
 
