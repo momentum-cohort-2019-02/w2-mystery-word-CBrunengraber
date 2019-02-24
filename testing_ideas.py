@@ -47,15 +47,27 @@ while running:
         print('you must enter easy, medium, or hard')
 
 
+#create main game loop
+# how to get into game loop after completing above loop?
+# I need the words to be brought into the game
+# words must be randomly selected for the user
+# letters must be guessed at
+# letters must be hidden, only shown when guessed
+# keep track of guesses
+# keep track of letters guessed
+# if user enters a guessed letter, print statement to select another letter
+# if user selects anything other than 1 letter, tell them to select an unguessed letter. 
+# limit the number of attempts to 8 (are any words in the list going to fall outside this spectrum?)
 
-game_loop = True
+
+game_loop = True # this should make the game run, and it will be false when won or lost
 
 while game_loop:
-    choices = ('words') #
+    choices = ('words') #not sure if this needs brackets instead, and if it should exist outside loop. 
     auto_selected_word = random.choice(words).lower
-    guesses = 0 # other games online set this to none - this is where the user guesses letters
+    guesses = 0 # other games online set this to none, not sure why - this is where the user guesses letters
     guessed_letters = [] #users guesses get put here
     unguessed_word = [] #replaces letters of unguessed word with dashes
     for letter in auto_selected_word:
         unguessed_word.append('_') # this should add letters guessed to the underscore until the word is completed
-    attempts = 12   
+    attempts = 8
