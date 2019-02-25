@@ -2,7 +2,7 @@ import string
 import random
 
 def auto_selected_word(words):
-    auto_selected_word = random.choice(words).lower
+    return random.choice(words).lower
 
 
 def normalize_text(text):
