@@ -1,6 +1,9 @@
 import string
 import random
 
+def auto_selected_word(words):
+    auto_selected_word = random.choice(words).lower
+
 
 def normalize_text(text):
     """Takes text and removes punctuation and replaces whitespace with normal spaces- compressing single spaces"""
@@ -31,31 +34,36 @@ with open('words.txt') as file:
 # - run this if you need to see what the words look like and in what format
 # user must now enter level of difficulty
 
+
+
 running = True  
 
 while running:
-    x = input('Please select your level of difficulty - easy, medium, or hard: ')
-    print('You selected: ', x)
-    if x == 'easy':
+    level = input('Please select your level of difficulty - easy, medium, or hard: ')
+    print('You selected: ', level)
+    if level == 'easy':
         running = False
         print("let's play!")
-    if x == 'medium':
+    if level == 'medium':
         running = False
         print("let's play!")
-    if x == 'hard':
+    if level == 'hard':
         running = False
         print("let's play!")
-    if x not in ['easy', 'medium', 'hard']:     
+    if level not in ['easy', 'medium', 'hard']:     
         print('you must enter easy, medium, or hard')
 
 
+
+                
+
+            #using level as a parameter, make a function that will let you have a word list of difficulty selected for you based on easy, medium or hard ----- return level_emh - look at what taylor posted
+# create one words list with randomizer that was written below
+
 #sort words in list by length
 
-# create three seperate lists or simply output the values that fit the parameters
 
 # check 2/22 video for clarity
-
-#rename the lists
 
 # create a for loop with three seperate if statements
 
@@ -63,14 +71,7 @@ while running:
 #     if len('number_of_letters') >= 4 and <=6
 
 
-
-
-
-
-# medium = []
-# hard = []
-
-#create main game loop - MUST BE DEFINED FIRST - THEN MAKE THIS THE MAIN CALL
+#create main game loop - MUST BE DEFINED FIRST - THEN MAKE THIS THE MAIN CALL - should it be a class instead?
 # user must guess a hidden word in 12 trys or lose
 # *****how to get into game loop after completing above loop?******
 # I need the words to be brought into the game *****can they be defined and left outside loops or have to be put in each time?
@@ -85,14 +86,14 @@ while running:
 
 
 
-game_loop = True # this should make the game run, and it will be false when won or lost
+# game_loop = True # this should make the game run, and it will be false when won or lost
 
-while game_loop:
-    choices = ('words') #not sure if this needs brackets instead, and if it should exist outside loop. 
-    auto_selected_word = random.choice(words).lower
-    guesses = 0 # other games online set this to none, not sure why - this is where the user guesses letters
-    guessed_letters = [] #users guesses get put here
-    unguessed_word = [] #replaces letters of unguessed word with dashes
-    for letter in auto_selected_word:
-        unguessed_word.append('_') # this should add letters guessed to the underscore until the word is completed
-    attempts = 8
+# while game_loop:
+#     choices = ('words') #not sure if this needs brackets instead, and if it should exist outside loop. 
+
+#     guesses = 0 # other games online set this to none, not sure why - this is where the user guesses letters
+#     guessed_letters = [] #users guesses get put here
+#     unguessed_word = [] #replaces letters of unguessed word with dashes
+#     for letter in auto_selected_word:
+#         unguessed_word.append('_') # this should add letters guessed to the underscore until the word is completed
+#     attempts = 8
