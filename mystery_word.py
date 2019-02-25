@@ -1,7 +1,7 @@
-import string
+import string  #imports always at the top
 import random
 
-def auto_selected_word(words):
+def auto_selected_word(words):          
     return random.choice(words).lower
 
 
@@ -36,19 +36,19 @@ with open('words.txt') as file:
 
 
 
-running = True  
+difficulty = True  
 
-while running:
+while difficulty:
     level = input('Please select your level of difficulty - easy, medium, or hard: ')
     print('You selected: ', level)
     if level == 'easy':
-        running = False
+        difficulty = False
         print("let's play!")
     if level == 'medium':
-        running = False
+        difficulty = False
         print("let's play!")
     if level == 'hard':
-        running = False
+        difficulty = False
         print("let's play!")
     if level not in ['easy', 'medium', 'hard']:     
         print('you must enter easy, medium, or hard')
