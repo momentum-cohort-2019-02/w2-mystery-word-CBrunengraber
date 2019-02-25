@@ -83,3 +83,5 @@ if guess == auto_selected_word:
 if guess != auto_selected_word:
     number = str(number)
     print('Sorry, the word I was thinking of was ' + number + '.')
+
+    ## def something as a function to startgame, it calls something, and you can nest other functions and while loops inside. 

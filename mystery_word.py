@@ -70,7 +70,7 @@ while running:
 # medium = []
 # hard = []
 
-#create main game loop
+#create main game loop - MUST BE DEFINED FIRST - THEN MAKE THIS THE MAIN CALL
 # user must guess a hidden word in 12 trys or lose
 # *****how to get into game loop after completing above loop?******
 # I need the words to be brought into the game *****can they be defined and left outside loops or have to be put in each time?
