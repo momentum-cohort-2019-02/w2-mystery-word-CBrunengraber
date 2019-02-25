@@ -31,7 +31,7 @@ with open('words.txt') as file:
 # - run this if you need to see what the words look like and in what format
 # user must now enter level of difficulty
 
-running = True
+running = True  
 
 while running:
     x = input('Please select your level of difficulty - easy, medium, or hard: ')

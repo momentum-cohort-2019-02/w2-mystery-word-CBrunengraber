@@ -58,30 +58,32 @@ auto_selected_word = random.choice('words').lower
 
 print('Well, ' + myName + ', I am thinking of a word, and you must guess it.')
 
-for guessesTaken in range(8):
-    print('Take a guess.') 
-    guess = input()
-    guess = guess.lower()
-    blanks = '_' * len(auto_selected_word)
+def char(guess): # not sure if necessary (Also, can you have both for and while loops under one def)
 
-    # char needs to be defined. not sure how to do this. It also needs to be recognized as a non-integer
+    for guessesTaken in range(8):
+        print('Take a guess.') 
+        guess = input()
+        guess = guess.lower() # can guess be = to two different callable variables?
+        blanks = '_' * len(auto_selected_word)
 
-    if guess == char in auto_selected_word:
-        print() # you have to tell it to replace a blank with a letter 
+        # char needs to be defined. not sure how to do this. It also needs to be recognized as a non-integer
 
-    if guess != char in auto_selected_word:
-        print('Sorry ' + () 'is not a letter in word, guess again')
+        if guess == char in auto_selected_word:
+            print() # you have to tell it to replace a blank with a letter 
+
+        if guess != char in auto_selected_word:
+            print('Sorry ' + () 'is not a letter in word, guess again')
+
+        if guess == auto_selected_word:
+            break
 
     if guess == auto_selected_word:
-        break
+        guessesTaken = str(guessesTaken + 1)
+        print('Good job, ' + myName + '! You guessed my word in ' +
+        guessesTaken + ' trys!')
 
-if guess == auto_selected_word:
-    guessesTaken = str(guessesTaken + 1)
-    print('Good job, ' + myName + '! You guessed my word in ' +
-      guessesTaken + ' trys!')
-
-if guess != auto_selected_word:
-    number = str(number)
-    print('Sorry, the word I was thinking of was ' + number + '.')
+    if guess != auto_selected_word:
+        number = str(number)
+        print('Sorry, the word I was thinking of was ' + number + '.')
 
     ## def something as a function to startgame, it calls something, and you can nest other functions and while loops inside. 
